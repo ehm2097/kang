@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\core\core.csproj" />
-    <ProjectReference Include="..\lite\lite.csproj" />
   </ItemGroup>
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <AssemblyName>Kang.Console</AssemblyName>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Kang.Lite</AssemblyName>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.11" />
+  </ItemGroup>
 </Project>

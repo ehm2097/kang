@@ -1,19 +1,20 @@
+using System;
 using System.Collections.Generic;
 
 namespace Kang.Core
 {
-    interface IMediaRepository
+    public interface IContentRepository
     {
-        ContentNode GetRootNode();
-        IEnumerable<ContentNode> GetChildNodes(IContentKey parentId);
+        // ContentNode GetRootNode();
+        void IterateChildNodes(IContentKey parentKey, Action<ContentNode> action);
 
-        ContentNode AppendNode(ContentNode node, IContentKey parentId);
-        void InsertNode(ContentNode node, ContentNode parentNode, ContentNode beforeNode);
+        // ContentNode AppendNode(ContentNode node, IContentKey parentId);
+        // void InsertNode(ContentNode node, ContentNode parentNode, ContentNode beforeNode);
 
-        void DeleteNode(IContentKey nodeId);
+        // void DeleteNode(IContentKey nodeId);
 
-        void MoveNode(ContentNode node, ContentNode parentNode);
-        void MoveNode(ContentNode node, ContentNode parentNode, ContentNode beforeNode);
+        // void MoveNode(ContentNode node, ContentNode parentNode);
+        // void MoveNode(ContentNode node, ContentNode parentNode, ContentNode beforeNode);
 
         // IEnumerable<INamedToken> RatingCategories { get; }
         // int GetRating(IContentKey nodeId, INamedToken ratingCategory);
