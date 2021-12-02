@@ -10,4 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.11" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="command-scripts.txt"/>
+  </ItemGroup>
 </Project>
